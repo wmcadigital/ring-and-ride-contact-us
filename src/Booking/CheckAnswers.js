@@ -197,7 +197,7 @@ const CheckAnswers = ({
         <CheckAnswerRow
           label="Date of booking"
           value={formValues["bookingDateDayAuto"]}
-          changeValueCallback={() => setGoToPage(4 + offSet1)}
+          changeValueCallback={() => setGoToPage(5 + offSet1)}
           disableButton={submitting}
         />
         <CheckAnswerRow
@@ -206,13 +206,13 @@ const CheckAnswers = ({
             formValues.outwardPickup.hour,
             formValues.outwardPickup.minute
           )}
-          changeValueCallback={() => setGoToPage(5 + offSet1)}
+          changeValueCallback={() => setGoToPage(6 + offSet1)}
           disableButton={submitting}
         />
         <CheckAnswerRow
           label="Collection address"
           value={outWardCollectionAddress}
-          changeValueCallback={() => setGoToPage(6 + offSet2)}
+          changeValueCallback={() => setGoToPage(7 + offSet2)}
           disableButton={submitting}
         />
         <CheckAnswerRow
@@ -220,7 +220,7 @@ const CheckAnswers = ({
           value={
             <AddressFormatted addressObj={formValues["outwardDestination"]} />
           }
-          changeValueCallback={() => setGoToPage(7 + offSet2)}
+          changeValueCallback={() => setGoToPage(8 + offSet2)}
           disableButton={submitting}
         />
         {bookingParty !== "behalfGroup" &&
@@ -230,7 +230,7 @@ const CheckAnswers = ({
               bookingParty === "mySelf" ? "you" : "them"
             }`}
             value={`${formValues["additionalPassengerNumbers"]} other people`}
-            changeValueCallback={() => setGoToPage(9 + offSet2)}
+            changeValueCallback={() => setGoToPage(10 + offSet2)}
             disableButton={submitting}
           />
         ) : null}
@@ -289,7 +289,7 @@ const CheckAnswers = ({
                     );
                     setConfirmSameAdditionalPassenger("no");
                   }
-                  setGoToPage(13 + offSet5);
+                  setGoToPage(14 + offSet5);
                 }}
                 disableButton={submitting}
               />
